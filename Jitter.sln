@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jitter", "Jitter\Jitter.csproj", "{2D3F86C2-DC9E-4FD3-BAE7-D9C65CE40BAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jitter", "Jitter\Jitter.csproj", "{079FBA9E-AB25-4931-938F-2FC175DEF303}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jitter.Tests", "Jitter.Tests\Jitter.Tests.csproj", "{921D38B7-BA0C-4CD1-B499-AFFA7F88F833}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jitter.Tests", "Jitter.Tests\Jitter.Tests.csproj", "{1A3404C2-51E9-4B79-8B3D-B825942C059E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2D3F86C2-DC9E-4FD3-BAE7-D9C65CE40BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D3F86C2-DC9E-4FD3-BAE7-D9C65CE40BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D3F86C2-DC9E-4FD3-BAE7-D9C65CE40BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D3F86C2-DC9E-4FD3-BAE7-D9C65CE40BAE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{921D38B7-BA0C-4CD1-B499-AFFA7F88F833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{921D38B7-BA0C-4CD1-B499-AFFA7F88F833}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{921D38B7-BA0C-4CD1-B499-AFFA7F88F833}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{921D38B7-BA0C-4CD1-B499-AFFA7F88F833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{079FBA9E-AB25-4931-938F-2FC175DEF303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{079FBA9E-AB25-4931-938F-2FC175DEF303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{079FBA9E-AB25-4931-938F-2FC175DEF303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{079FBA9E-AB25-4931-938F-2FC175DEF303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3404C2-51E9-4B79-8B3D-B825942C059E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A3404C2-51E9-4B79-8B3D-B825942C059E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A3404C2-51E9-4B79-8B3D-B825942C059E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A3404C2-51E9-4B79-8B3D-B825942C059E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
