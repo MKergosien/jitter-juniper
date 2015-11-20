@@ -23,5 +23,17 @@ namespace Jitter.Models
 
         public string LastName { get; set; }
         public string Picture { get; set; }
+
+        //Icollection, IEnumerable, IQueryable - All interfaces - 
+        public List<Jot> Jots { get; set; }
+
+        //Those we are following
+        public List<JitterUser> Following { get; set; }
+
+        //One way to do it, not only way.  List of who is following us. 
+        //public List<JitterUser> Followers { get; set; }
+
+
+
     }
 }
