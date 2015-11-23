@@ -6,10 +6,11 @@ using System.Data.Entity;
 
 namespace Jitter.Models
 {
-    public class JitterContext : DbContext 
+    public class JitterContext : DbContext
     {
-        // IDbSet, IQueryable
-        public DbSet<JitterUser> JitterUsers { get; set; }
+        //IDbSet, IQueryable are options(???)
+        public virtual DbSet<JitterUser> JitterUsers { get; set; }
         public DbSet<Jot> Jots { get; set; }
+
     }
 }
