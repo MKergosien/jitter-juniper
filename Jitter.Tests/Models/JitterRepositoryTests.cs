@@ -11,6 +11,35 @@ namespace Jitter.Tests.Models
     [TestClass]
     public class JitterRepositoryTests
     {
+        private Mock<JitterContext> mock_context;
+        private Mock<DbSet<JitterUser>> mock_set;
+        [TestMethod]
+        public void ConnectMocksToDataStore(IEnumerable<JitterUser> data_store)
+        {
+            //var type_i_want = object_type.Name;
+            //var data_source = data_store.AsQueryable<JitterUser>();
+            var data_source = (data_store as IEnumerable<JitterUser>).AsQueryable();
+            //Convince LINQ that out Mock DbSet is a (relational) Data store. 
+            mock_set.As<IQueryable<JitterUser>>().Setup(data => data.Provider).Returns(data_source.Provider);
+            mock_set.As<IQueryable<JitterUser>>().Setup(data => data.Expression).Returns(data_source.Expression);
+            mock_set.As<IQueryable<JitterUser>>().Setup(data => data.ElementType).Returns(data_source.ElementType);
+            mock_set.As<IQueryable<JitterUser>>().Setup(data => data.GetEnumerator()).Returns(data_source.GetEnumerator);
+        }
+
+        [TestInitialize]
+        public void Initialize()
+        {
+            mock_context = new Mock<JitterContext>();
+            mock_set = new Mock<DbSet<JitterUser>>();
+        }
+
+        [TestCleanup]
+        public void Cleanup()
+        {
+            mock_context = null;
+
+        }
+
         [TestMethod]
         public void TestMethod1()
         {
@@ -40,11 +69,7 @@ namespace Jitter.Tests.Models
             mock_set.Object.AddRange(expected);
             var data_source = expected.AsQueryable();
 
-            //Convince LINQ that out Mock DbSet is a (relational) Data store. 
-            mock_set.As<IQueryable<JitterUser>>().Setup(data => data.Provider).Returns(data_source.Provider);
-            mock_set.As<IQueryable<JitterUser>>().Setup(data => data.Expression).Returns(data_source.Expression);
-            mock_set.As<IQueryable<JitterUser>>().Setup(data => data.ElementType).Returns(data_source.ElementType);
-            mock_set.As<IQueryable<JitterUser>>().Setup(data => data.GetEnumerator()).Returns(data_source.GetEnumerator);
+            ConnectMocksToDataStore(expected, typeof(JitterUser));
 
             //This is Stubbing the JitterUsers property getter
             mock_context.Setup(a => a.JitterUsers).Returns(mock_set.Object);
